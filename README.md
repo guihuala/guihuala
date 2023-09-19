@@ -1,4 +1,4 @@
-- I'm guihualagao.I just want to sing up an account so that I can get something to learn.
+- I'm guihualagao.I just want to sign up an account so that I can get something to learn.
 - my Engilsh writing skill is so poor.
 
 
