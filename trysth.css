@@ -1,31 +1,107 @@
-
 @media screen and (min-width:768px) {
     body {
-        background-image: url("IMG_20230723_190437.jpg");
+        background: linear-gradient(225deg, rgb(255, 249, 126), rgb(107, 217, 186), rgb(110, 171, 217));
         background-attachment: fixed;
         background-size: cover;
+        font-family: 'Times New Roman', Times, serif;
     }
-    
+
     p {
         color: rgb(255, 255, 255);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    
-    img{
-        border-radius: 50px;
+
+    img {
+        border-radius: 25px;
     }
+
+    .topnav {
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        overflow: hidden;
+        background-color: #ffffff00;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        backdrop-filter: blur(10px);
+    }
+
+    .topnav span {
+        float: right;
+        display: block;
+        color: #ffffff;
+        font-weight: 400;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .topnav span:hover {
+        color: rgb(82, 232, 190);
+        border-radius: 20%;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #ffffff;
+        font-weight: 400;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .topnav a:hover {
+        background-color: #fff1d2;
+        color: rgb(82, 232, 190);
+        border-radius: 20%;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 4;
+        top: 0;
+        right: 0;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        backdrop-filter: blur(10px);
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        color: rgb(82, 232, 190);
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: rgb(33, 173, 133);
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
     .dec {
         float: unset;
         position: fixed;
         bottom: 10px;
         right: 10px;
     }
-    
+
     .bg {
         float: inline-end;
         border-radius: 50px;
     }
-    
+
     .type {
         width: 200px;
         background: none;
@@ -34,7 +110,7 @@
         padding: 10px;
         outline: none;
     }
-    
+
     .login {
         width: 200px;
         background: none;
@@ -43,114 +119,654 @@
         padding: 10px;
         outline: none;
     }
-    
+
     .button {
         font-size: large;
         font-weight: 600;
         color: white;
         width: 100px;
         height: 50px;
-        background: linear-gradient(45deg, rgb(194, 244, 255), rgb(255, 201, 201));
+        background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
         border: none;
         border-top: 1px solid white;
         border-left: 1px solid white;
         border-radius: 5px;
     }
-    
-    .box1 {
-    
-        width: auto;
-        height: auto;
-        background: linear-gradient(45deg, rgba(194, 229, 237, 0.215), rgba(255, 230, 230, 0.5));
-        border-top: 1px solid white;
-        border-left: 1px solid white;
-        border-radius: 50px;
-        flex-direction: column;
-        box-shadow: 10px 10px 10px 7px rgba(171, 171, 171, 0.438);
+
+    .button:active {
+        animation: click-animation 0.3s;
     }
-    
-    .box1:hover{
-        background: linear-gradient(45deg, rgb(194, 229, 237), rgb(255, 230, 230));
+
+    .button:hover {
+        background: linear-gradient(45deg, rgb(255, 215, 113), rgb(98, 210, 165));
+        transform: scale(1.1);
     }
-    
-    .box4 {
-        font-size: 100px;
-        height: 200px;
-        background: linear-gradient(45deg, rgba(194, 229, 237, 1), rgba(255, 230, 230, 1));
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        -webkit-background-clip: text;
-        color: transparent;
-        backdrop-filter: blur(5px);
+
+    .container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 5px;
+        padding: 100px;
     }
-    
-    .box4:hover{
-        background: linear-gradient(45deg, rgb(156, 237, 255), rgb(255, 161, 161));
-        -webkit-background-clip: text;
-        color: transparent;
-    }
-    
-    .box5 {
-        background-color: rgba(255, 255, 255, 0.5);
-    }
-    
-    .navbg {
-        justify-content: left;
-        height: 10px;
-        background: linear-gradient(45deg, rgb(194, 244, 255), rgb(255, 201, 201));
-        animation: anima01 6s linear infinite;
-    }
-    
-    .navbg:hover{
-        animation-play-state: paused;
-    }
-    
-    .nav li {
-        font-size: 25px;
-        float: left;
-        margin: 10px;
-    }
-    
-    div {
-        color: rgb(255, 255, 255);
-        width: auto;
-        height: auto;
-        padding: 50px;
-        margin: 10px;
+
+    .sidebar {
         display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 230, 141, 0);
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        border-radius: 15px;
+        padding: 25px;
+        z-index: 3;
+    }
+
+    .main {
+        background-color: rgba(255, 255, 255, 0);
+        padding: 50px;
+    }
+
+    .post {
+        background-color: rgba(255, 255, 255, 0.421);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: #2bb57e 0px 0px 10px;
+        color: #fff;
+    }
+
+    .information {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .post:hover {
+        background: rgba(255, 255, 255, 0);
+        border-top: #fff 1px solid;
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        border-radius: 15px;
+        animation: alternate spin 1s forwards;
+    }
+
+    .welcome {
+        position: absolute;
+        top: 100px;
+        display: flex;
+        background: radial-gradient(circle, rgb(255, 230, 141) 0%, rgb(167, 255, 197) 35%, rgba(255, 255, 255, 1) 100%);
+        background-size: 200% 200%;
+        animation: cd-animation 2s linear infinite;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        shape-outside: circle(50%);
         justify-content: center;
         align-items: center;
-        border-radius: 10px;
+        overflow: hidden;
+        z-index: 2;
+        animation: alternate translate-animation 5s infinite;
     }
-    
+
+    .shape {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .blur1 {
+        filter: blur(5px);
+        position: absolute;
+        top: 500px;
+        left: 500px;
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
+        border-radius: 50%;
+        z-index: 2;
+        animation: alternate scale-animation 5s infinite;
+    }
+
+    .blur2 {
+        filter: blur(10px);
+        position: absolute;
+        top: 400px;
+        bottom: 0px;
+        left: 1050px;
+        width: 400px;
+        height: 400px;
+        background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
+        border-radius: 50%;
+        z-index: 2;
+        animation: alternate scale-animation2 3s infinite;
+    }
+
+    .blur3 {
+        filter: blur(20px);
+        position: absolute;
+        top: 400px;
+        left: -50px;
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
+        border-radius: 50%;
+        z-index: 1;
+        animation: alternate scale-animation2 3s infinite;
+    }
+
+    .slideshow img {
+        display: none;
+    }
+
+    .slideshow img.active {
+        display: block;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotateX(0deg);
+        }
+
+        100% {
+            transform: rotateX(15deg);
+        }
+    }
+
+    @keyframes scale-animation {
+        0% {
+            transform: scale(1)translateY(0);
+        }
+
+        50% {
+            transform: scale(1.1)translateY(-50px);
+        }
+
+        100% {
+            transform: scale(1)translate(0);
+        }
+    }
+
+    @keyframes scale-animation2 {
+        0% {
+            transform: scale(1)translateY(0)translateX(0);
+        }
+
+        50% {
+            transform: scale(1.1)translateY(50px)translateX(-50px);
+        }
+
+        100% {
+            transform: scale(1)translate(0)translateX(10px);
+        }
+
+    }
+
+    @keyframes translate-animation {
+        0% {
+            transform: translateY(0)translateX(0);
+        }
+
+        50% {
+            transform: translateX(50px)translateY(50px);
+        }
+
+        100% {
+            transform: translateY(0)translateX(0);
+        }
+
+    }
+
+    @keyframes cd-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @keyframes click-animation {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(0.9);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
     td {
-        color: rgb(255, 189, 189);
+        color: rgb(98, 210, 165);
         font-size: 50px;
-        width: 150px;
-        height: 100px;
+        width: 50px;
+        height: 25px;
         text-align: center;
         background-color: rgba(255, 255, 255, 0.446);
-        box-shadow: 5px 5px 5px 3px rgba(244, 244, 244, 0.362);
-        border-radius: 30px;
         margin: 20px;
     }
-    
+
     table {
         padding: 50px;
-        background: linear-gradient(rgb(194, 229, 237), rgb(255, 230, 230));
+        background: linear-gradient(rgba(98, 210, 165, 0.084), rgb(255, 215, 113));
         border-radius: 20px;
     }
-    
-    @keyframes anima01 {
-        0%{
-            background: linear-gradient(45deg, rgb(194, 244, 255), rgb(255, 201, 201));
+
+}
+
+@media screen and (max-width:768px) {
+    body {
+        background: linear-gradient(225deg, rgb(255, 249, 126), rgb(107, 217, 186), rgb(110, 171, 217));
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    p {
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+    }
+
+    img {
+        border-radius: 25px;
+    }
+
+    .topnav {
+        position: relative;
+        width: 100%;
+        height: 30%;
+        z-index: 4;
+        overflow: hidden;
+        background-color: #ffffff00;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        backdrop-filter: blur(10px);
+    }
+
+    .topnav span {
+        font-size: 16px;
+        float: right;
+        display: block;
+        color: #ffffff;
+        font-weight: 400;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .topnav span:hover {
+        color: rgb(82, 232, 190);
+        border-radius: 20%;
+
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        padding: 10px 10px;
+        text-decoration: none;
+    }
+
+    .topnav a:hover {
+        background-color: #fff1d2;
+        color: rgb(82, 232, 190);
+        border-radius: 20%;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 4;
+        top: 0;
+        right: 0;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        backdrop-filter: blur(10px);
+    }
+
+    .sidenav a {
+        font-size: 50px;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        color: rgb(82, 232, 190);
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: rgb(33, 173, 133);
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        right: 25px;
+        font-size: 100px;
+        margin-left: 50px;
+    }
+
+    .dec {
+        float: unset;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .bg {
+        float: inline-end;
+        border-radius: 50px;
+    }
+
+    .type {
+        width: 200px;
+        background: none;
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 10px;
+        outline: none;
+    }
+
+    .login {
+        width: 10%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 10px;
+        outline: none;
+    }
+
+    .button {
+        font-size: large;
+        font-weight: 600;
+        color: white;
+        width: 100px;
+        height: 50px;
+        background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
+        border: none;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-radius: 5px;
+    }
+
+    .button:active {
+        animation: click-animation 0.3s;
+    }
+
+    .button:hover {
+        background: linear-gradient(45deg, rgb(255, 215, 113), rgb(98, 210, 165));
+        transform: scale(1.1);
+    }
+
+    .decoration {
+        position: relative;
+        height: 100%;
+        font-size: 18px;
+        padding: 50px;
+        overflow: hidden;
+        height: max-content;
+    }
+
+    .container {
+        width: 100%;
+        position: relative;
+        display: grid;
+        gap: 5px;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255, 230, 141, 0);
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        border-radius: 15px;
+        padding: 25px;
+        z-index: 3;
+    }
+
+    .main {
+        background-color: rgba(255, 255, 255, 0);
+        padding: 50px;
+    }
+
+    .post {
+        background-color: rgba(255, 255, 255, 0.421);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: #2bb57e 0px 0px 10px;
+        color: #fff;
+    }
+
+    .information {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .post:hover {
+        background: rgba(255, 255, 255, 0);
+        border-top: #fff 1px solid;
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        border-radius: 15px;
+        animation: alternate spin 1s forwards;
+    }
+
+    .maomi {
+        position: relative;
+        color: rgba(255, 255, 255, 0);
+        font-size: 25px;
+        z-index: 4;
+        animation: alternate rotation-animation 1s infinite;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+    }
+
+    .maomi:hover {
+        animation-play-state: paused;
+        color: #ffffff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95;
+    }
+
+    .welcome {
+        position: absolute;
+        display: flex;
+        background: radial-gradient(circle, rgb(255, 230, 141) 0%, rgb(167, 255, 197) 35%, rgba(255, 255, 255, 1) 100%);
+        background-size: 200% 200%;
+        animation: cd-animation 2s linear infinite;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        shape-outside: circle(50%);
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 2;
+        animation: alternate translate-animation 5s infinite;
+    }
+
+    .shape {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    #circle {
+        position: absolute;
+        top: 200px;
+        width: 200px;
+        height: 200px;
+    }
+
+    #circle span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform-origin: bottom center;
+    }
+
+    .blur1 {
+        filter: blur(5px);
+        position: absolute;
+        top: 800px;
+        left: 500px;
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
+        border-radius: 50%;
+        z-index: 2;
+        animation: alternate scale-animation 5s infinite;
+    }
+
+    .blur2 {
+        filter: blur(10px);
+        position: absolute;
+        top: 1000px;
+        bottom: 0px;
+        left: 400px;
+        width: 600px;
+        height: 600px;
+        background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
+        border-radius: 50%;
+        z-index: 2;
+        animation: alternate scale-animation2 3s infinite;
+    }
+
+    .blur3 {
+        filter: blur(20px);
+        position: absolute;
+        top: 400px;
+        left: -50px;
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
+        border-radius: 50%;
+        z-index: 1;
+        animation: alternate scale-animation2 3s infinite;
+    }
+
+    #ball {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
+        border-radius: 50%;
+        filter: blur(10px);
+        z-index: 2;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+    }
+
+    .slideshow img {
+        display: none;
+    }
+
+    .slideshow img.active {
+        display: block;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotateX(0deg);
         }
-        50%{
-            background: linear-gradient(45deg, rgb(194, 255, 237), rgb(255, 250, 201));
+
+        100% {
+            transform: rotateX(15deg);
         }
-        100%{
-            background: linear-gradient(45deg, rgb(255, 220, 194), rgb(201, 255, 241));
+    }
+
+    @keyframes scale-animation {
+        0% {
+            transform: scale(1)translateY(0);
         }
+
+        50% {
+            transform: scale(1.1)translateY(-50px);
+        }
+
+        100% {
+            transform: scale(1)translate(0);
+        }
+    }
+
+    @keyframes scale-animation2 {
+        0% {
+            transform: scale(1)translateY(0)translateX(0);
+        }
+
+        50% {
+            transform: scale(1.1)translateY(50px)translateX(-50px);
+        }
+
+        100% {
+            transform: scale(1)translate(0)translateX(10px);
+        }
+
+    }
+
+    @keyframes translate-animation {
+        0% {
+            transform: translateY(0)translateX(0);
+        }
+
+        50% {
+            transform: translateX(50px)translateY(50px);
+        }
+
+        100% {
+            transform: translateY(0)translateX(0);
+        }
+
+    }
+
+    @keyframes cd-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @keyframes click-animation {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(0.9);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    td {
+        color: rgb(98, 210, 165);
+        font-size: 50px;
+        width: 50px;
+        height: 25px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.446);
+        margin: 20px;
+    }
+
+    table {
+        padding: 50px;
+        background: linear-gradient(rgba(98, 210, 165, 0.084), rgb(255, 215, 113));
+        border-radius: 20px;
     }
 }

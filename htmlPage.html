@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桂花拉糕前端API</title>
+    <link rel="shortcut icon" href="./照片图标_副本.png">
+    <link rel="stylesheet" href="./trysth.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_4437936_3ad54bk00lb.css">
+    <style>
+        h2 {
+            color: #fff;
+        }
+
+        #ball {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
+            border-radius: 50%;
+            filter: blur(10px);
+            z-index: 2;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+        }
+
+        #circle {
+            position: absolute;
+            top: 200px;
+            left: 850px;
+            width: 200px;
+            height: 200px;
+        }
+
+        #circle span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transform-origin: bottom center;
+        }
+
+        .maomi {
+            position: relative;
+            color: rgba(255, 255, 255, 0);
+            font-size: 75px;
+            top: -100px;
+            left: 300px;
+            z-index: 3;
+            animation: alternate rotation-animation 1s infinite;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        }
+
+        .maomi:hover {
+            animation-play-state: paused;
+            color: #ffffff;
+            text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95;
+        }
+
+        .ghlg {
+            position: absolute;
+            top: 450px;
+            left: 50px;
+            z-index: 3;
+        }
+
+        .func {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .functionbtn {
+            margin: 10px;
+            padding: 10px;
+            border: #fff 1px solid;
+            height: 100px;
+            transition: 0.5d;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .functionbtn:hover {
+            background-color: #ffeea4;
+        }
+
+        @keyframes rotation-animation {
+            0% {
+                transform: rotate(-15deg);
+            }
+
+            100% {
+                transform: rotate(15deg);
+            }
+
+        }
+
+        #enen {
+            color: blanchedalmond;
+        }
+
+        .decoration {
+            font-size: 20px;
+            padding: 50px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!DOCTYPE html>
+
+    <button onclick="topFunction()" id="myBtn"
+        style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99;background: transparent; border: none;">
+        <img src="https://ghlg.fun/%E6%A1%82%E8%8A%B1%E6%B3%A5%E5%9B%BE%E6%A0%87.png" alt="Top"
+            style="width: 150px; height: 150px">
+    </button>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            document.getElementById("myBtn").style.display = "block";
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        var button = document.getElementById("myBtn");
+        button.addEventListener("mouseover", function () {
+            button.style.transform = "scale(1.2)";
+        });
+
+        button.addEventListener("mouseout", function () {
+            button.style.transform = "scale(1)";
+        });
+    </script>
+
+
+    <div class="topnav">
+        <span class="iconfont icon-gongneng" onclick="openNav()" open></span>
+        <a href="#section1">标题</a>
+        <a href="#section2">文字</a>
+        <a href="#section3">图片</a>
+        <a href="#section3">链接</a>
+        <a href="#section2">分割线</a>
+        <a href="#section3">列表</a>
+        <a href="#section4">表单</a>
+    </div>
+
+
+
+    <div id="section1" class="decoration">
+        <div id="ball"></div>
+
+        <div class="maomi">
+            <h1 align="center">来学HTML!</h1>
+        </div>
+
+        <div id="circle"></div>
+
+        <script>
+            var text = '桂花拉糕桂花拉糕桂花拉糕桂花拉糕桂花拉糕桂花拉糕桂花拉糕';
+            var container = document.getElementById('circle');
+
+            for (var i = 0; i < text.length; i++) {
+                var letter = document.createElement('span');
+                var angle = 360 / text.length * i;
+                letter.innerHTML = text[i];
+                letter.style.transform = 'rotate(' + angle + 'deg)';
+                letter.style.color = 'white';
+                letter.style.fontWeight = 'bold';
+                container.appendChild(letter);
+            }
+        </script>
+
+        <div class="welcome">
+            <div class="shape">
+                <p align="center">桂花拉糕说：</p>
+                <p align="center">"html不难也不简单"<br>真的是这样的吗？</p>
+            </div>
+
+        </div>
+
+        <div class="blur1">
+        </div>
+
+        <div class="blur2">
+        </div>
+
+        <div class="blur3">
+        </div>
+
+        <div class="ghlg">
+            <img src="ghlg小人.png" alt="" style="width: 300px; height: 300px;">
+        </div>
+
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+        <a href="#">主页</a>
+        <a href="#">CSS</a>
+        <a href="#">javascript</a>
+        <a href="#">更多</a>
+        <a href="https://ghlg.fun/">桂花小站</a>
+    </div>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+
+    <div class="container">
+
+        <div class="sidebar">
+            <div>
+                <h2>html基本介绍:</h2>
+                <p>
+                    HTML是Hypertext Markup Language (超文本标记语言)的缩写，它是用于创建网页的标准标记语言。<br>
+                    HTML 不是一种编程语言，而是一种标记语言（markup language），标记语言是一套标记标签（markup tag）。<br>
+                    HTML (超文本标记语言) 作为 Web 开发的基础，几乎贯穿在所有网页开发过程中.
+                </p>
+            </div>
+
+            <hr color="white" width="300px">
+
+            <div class="func">
+                <h2>实用链接</h2>
+                <div class="functionbtn">
+                    <a href="">rgba工具</a>
+                </div>
+                <div class="functionbtn">
+                    <p></p>
+                </div>
+                <div class="functionbtn"></div>
+                <div class="functionbtn"></div>
+            </div>
+
+        </div>
+
+        <div class="main">
+
+            <div class="post"></div>
+            <div id="section2">
+
+                <h2>来试试看各种大小的标题吧</h2>
+                <div class="information post">
+
+                    <div>
+                        <h1 id="enen">快捷生成</h1>
+                        <h2>从1至6的</h2>
+                        <h3>大小的标题</h3>
+                        <h4>的方式是</h4>
+                        <h5>输入<b>h$*6</b></h5>
+                        <h6>来试试看吧</h6>
+                    </div>
+
+                    <div>
+                        <p>与之对应的代码是<br>
+                            &lt;h1 id="enen"&gt;快捷生成&lt;/h1&gt;<br>
+                            &lt;h2&gt;从1至6的&lt;/h2&gt;<br>
+                            &lt;h3&gt;大小的标题&lt;/h3&gt;<br>
+                            &lt;h4&gt;的方式是&#x7684;&#x65B9;&#x5;/h4&gt;<br>
+                            &lt;h5&gt;输入&lt;b&gt;h$*6&lt;/b&gt;&lt;/h5&gt;<br>
+                            &lt;h6&gt;来试试看吧&lt;/h6&gt;&lt;/p&gt;<br>
+                    </div>
+
+                    <div>
+                        <p>&lt;style&gt;#enen {<br>
+                            color: blanchedalmond;<br>
+                            }&lt;/style&gt;</p>
+                    </div>
+
+                </div>
+
+                <h2>试试看各种文字</h2>
+                <div class="post">
+
+                    <em>"我是小猫。"</em><br>
+                    <b>"我是小猫。"</b><br>
+                    <i>"我是小猫。"</i><br>
+                    <strong>"我是小猫。"</strong><br>
+                    <span>"我是小猫。"</span><br>
+                    <del>桂花拉糕女士是 <em>拉布拉多</em></del><br><br>
+                    <p>其实不需要任何标签，</p>直接输入文字也是可以显示文字内容的。
+                </div>
+
+                <h2>试试看插入分割线</h2>
+                <div class="post">
+
+                    <hr color="white" width="100px" size="100px">
+                    <hr color="white" width="100px" size="50px">
+                </div>
+
+            </div>
+
+            <hr color="white">
+
+            <div id="section3">
+                <h2>试试看列表标签吧</h2>
+                <div class="information  post">
+
+                    <div>
+                        <h3>有序列表</h3>
+                        <ol type="1">
+                            <li>桂花拉糕</li>
+                            <ol type="I">
+                                <li>othub<em>conse</em></li>
+                                <li>zapus</li>
+                                <li>rimon</li>
+                            </ol>
+                            <li>伞女士</li>
+                            <li>zyj女士</li>
+                            <li>mok</li>
+                            <li>tes</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h3>无序列表</h3>
+                        <ul type="circle">
+                            <li>桂花拉糕</li>
+                            <li>桂花拉面</li>
+                            <li>桂花拉猫</li>
+                        </ul>
+                        <ul type="disc">
+                            <li>桂花拉糕</li>
+                            <li>桂花拉面</li>
+                            <li>桂花拉猫</li>
+                        </ul>
+                        <ul type="square">
+                            <li>桂花拉糕</li>
+                            <li>桂花拉面</li>
+                            <li>桂花拉猫</li>
+                        </ul>
+                        <ul type="none">
+                            <li>桂花拉糕</li>
+                            <li>桂花拉面</li>
+                            <li>桂花拉猫</li>
+                        </ul>
+                        <p>快速生成无序列表ul>li*（想要的标签数量）</p>
+                        <p>无序列表可以作为网页导航</p>
+                    </div>
+
+                </div>
+
+                <h2>试试看插入图片和链接</h2>
+                <div class="post">
+
+                    <div class="slideshow">
+                        <img src="kill.jpg" alt="桂花拉糕的三辅二试做（大嘘）" width="500px" title="好难看啊！">
+                        <img src="headed.png" alt="" width="500px" title="个人非常喜欢这张"><br>
+                    </div>
+
+
+                    <p><em>鼠标放在图片上试试看</em></p><a href="file:///Users/xuzi/Desktop/web/test/test02.html">神秘地址</a>
+                    <script>
+                        var images = document.querySelectorAll('.slideshow img');
+                        var currentIndex = 0;
+
+                        function switchImage() {
+                            images[currentIndex].classList.remove('active');
+                            currentIndex = (currentIndex + 1) % images.length;
+                            images[currentIndex].classList.add('active');
+                        }
+
+                        setInterval(switchImage, 2000);  // 每 2 秒切换一次图片
+                    </script>
+
+                </div>
+
+                <h2>试试看form表单吧</h2>
+                <div id="section4" class="post">
+                    <div>
+
+                        <form action="">
+                            <br><input type="text" placeholder="随便写点什么吧" name="" class="type">
+                            <input type="submit" value="就这些！" class="button"><br>
+                        </form>
+                        <form action="">
+                            <br><input type="password" placeholder="请输入密码" class="login">
+                            <input type="submit" class="button">
+                        </form>
+                    </div>
+                    <div>
+                        <h2>试试看引入js脚本吧</h2>
+                        <script src="tryscripts.js"></script>
+                    </div>
+                </div>
+
+                <h2>试试看插入表格</h2>
+                <div class="information post">
+                    <div>
+
+                        <table>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                        </table><br>
+
+                        <p>快捷生成table>tr*n>td*n{内容}</p>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td colspan="2" rowspan="2">..</td>
+                                <td>..</td>
+                                <td>..</td>
+                                <td>..</td>
+                            </tr>
+                            <tr>
+                                <td>..</td>
+                                <td>..</td>
+                                <td>..</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">..</td>
+                                <td>..</td>
+                                <td>..</td>
+                                <td rowspan="3">..</td>
+                            </tr>
+                            <tr>
+                                <td>..</td>
+                                <td>..</td>
+                                <td>..</td>
+                                <td>..</td>
+                            </tr>
+                            <tr>
+                                <td>..</td>
+                                <td>..</td>
+                                <td>..</td>
+                                <td>..</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <br>
+        <p align="center">桂花拉糕正在争取做出属于自己的风格化网页！请大家多多支持！<br>虽然现在水平太差不知道多久之后才能实现，而且还有一堆各种各样的坑要填）</p>
+    </div>
+
+</body>
+
+</html>
