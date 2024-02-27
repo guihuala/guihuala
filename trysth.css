@@ -4,6 +4,7 @@
         background-attachment: fixed;
         background-size: cover;
         font-family: 'Times New Roman', Times, serif;
+        overflow-x: hidden;
     }
 
     p {
@@ -31,6 +32,16 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: .5rem;
+    }
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        background: transparent;
+        border: none;
     }
 
     .functionbtn {
@@ -261,7 +272,6 @@
         height: 100vh;
         font-size: 20px;
         padding: .2rem;
-        overflow: hidden;
     }
 
     #ball {
@@ -341,7 +351,7 @@
         height: 20rem;
         background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
         border-radius: 50%;
-        z-index: 1;
+        z-index: -1;
         animation: alternate scale-animation 5s infinite;
     }
 
@@ -354,7 +364,7 @@
         height: 20rem;
         background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
         border-radius: 50%;
-        z-index: 0;
+        z-index: -1;
         animation: alternate scale-animation2 3s infinite;
     }
 
@@ -367,7 +377,7 @@
         height: 500px;
         background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
         border-radius: 50%;
-        z-index: 1;
+        z-index: -2;
         animation: alternate scale-animation2 3s infinite;
     }
 
@@ -485,6 +495,7 @@
         background-attachment: fixed;
         background-size: cover;
         font-family: 'Times New Roman', Times, serif;
+        overflow-x: hidden;
     }
 
     p {
@@ -504,6 +515,7 @@
         top: 60%;
         left: -10%;
         z-index: 3;
+        display: none;
     }
 
     .func {
@@ -512,6 +524,11 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: .5rem;
+    }
+
+    #myBtn {
+        visibility: hidden;
+        position: fixed;
     }
 
     .functionbtn {
@@ -556,11 +573,7 @@
     }
 
     .topnav {
-        height: 10%;
-        position: fixed;
         display: flex;
-        inset: 0 0 auto 0;
-        top: 0;
         z-index: 4;
         overflow: hidden;
         justify-content: space-between;
@@ -600,6 +613,7 @@
     }
 
     .topnav a {
+        display: none;
         color: #ffffff;
         font-weight: 400;
         text-align: center;
@@ -619,7 +633,7 @@
         position: fixed;
         z-index: 4;
         top: 0;
-        right: 0;
+        left: 0;
         background-color: #ffffff;
         box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7;
         overflow-x: hidden;
@@ -724,7 +738,7 @@
         border-radius: 15px;
         animation: alternate spin 1s forwards;
     }
-
+    
     .decoration {
         position: relative;
         justify-content: center;
@@ -748,8 +762,8 @@
 
     #circle {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 10%;
+        left: 30%;
         width: 10rem;
         height: 10rem;
     }
@@ -766,8 +780,7 @@
         position: relative;
         color: rgba(255, 255, 255, 0);
         font-size: 220%;
-        top: 40%;
-        left: 10%;
+        top: 3%;
         z-index: 3;
         text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7;
     }
@@ -780,13 +793,13 @@
 
     .welcome {
         position: absolute;
-        top: 10%;
+        top: 60%;
+        left: 30%;
         display: flex;
-        background: radial-gradient(circle, rgb(255, 230, 141) 0%, rgb(167, 255, 197) 35%, rgba(255, 255, 255, 1) 100%);
-        background-size: 200% 200%;
+        background: radial-gradient(circle,  rgb(167, 255, 197) 35%, rgba(255, 255, 255, 1) 100%);
         animation: cd-animation 2s linear infinite;
-        width: 20rem;
-        height: 20rem;
+        width: 10rem;
+        height: 10rem;
         border-radius: 50%;
         shape-outside: circle(50%);
         justify-content: center;
@@ -797,20 +810,20 @@
     }
 
     .shape {
-        font-size: 30px;
+        font-size: 15px;
         font-weight: 600;
     }
 
     .blur1 {
         filter: blur(5px);
         position: absolute;
-        top: 70%;
+        top: 20%;
         left: 40%;
         width: 5rem;
         height: 5rem;
         background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
         border-radius: 50%;
-        z-index: 1;
+        z-index: -1;
         animation: alternate scale-animation 5s infinite;
     }
 
@@ -836,7 +849,7 @@
         height: 10rem;
         background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
         border-radius: 50%;
-        z-index: 1;
+        z-index: -1;
         animation: alternate scale-animation2 3s infinite;
     }
 
