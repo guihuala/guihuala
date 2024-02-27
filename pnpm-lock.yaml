@@ -1,0 +1,34 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@moefy-canvas/theme-meteor':
+    specifier: ^0.5.2
+    version: 0.5.2
+
+packages:
+
+  /@moefy-canvas/core@0.5.2:
+    resolution: {integrity: sha512-XkaVE91Tiwb35zFmI1DbrJpMh0xe54QbzQrc7ATwMos4C08dxBnwExwXEVS7oEct7owVDY1UWxtRRVE7smtzHw==}
+    dev: false
+
+  /@moefy-canvas/theme-meteor@0.5.2:
+    resolution: {integrity: sha512-I3XapsaAg9ZQlwh99M6PzTXH8fSNHDGkoCr+extAIT4AvVQjLehnmF+koGAIvSYZs3cijsnqYdF2NZGWiz6RmA==}
+    dependencies:
+      '@moefy-canvas/core': 0.5.2
+      '@moefy-canvas/utils': 0.5.2
+      ts-debounce: 4.0.0
+    dev: false
+
+  /@moefy-canvas/utils@0.5.2:
+    resolution: {integrity: sha512-DnI8I/cTBFfn3xoXwyyLEtye4pMI6zJFMxU1qps731xgYTWmzBqJPkZZd/2gfNnH5NnLUOGG7Ui3sMkmJ0vg0w==}
+    dependencies:
+      '@moefy-canvas/core': 0.5.2
+    dev: false
+
+  /ts-debounce@4.0.0:
+    resolution: {integrity: sha512-+1iDGY6NmOGidq7i7xZGA4cm8DAa6fqdYcvO5Z6yBevH++Bdo9Qt/mN0TzHUgcCcKv1gmh9+W5dHqz8pMWbCbg==}
+    dev: false

@@ -14,25 +14,103 @@
         border-radius: 25px;
     }
 
+    h2 {
+        color: #fff;
+    }
+
+    .ghlg {
+        position: absolute;
+        top: 450px;
+        left: 50px;
+        z-index: 3;
+    }
+
+    .func {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    .functionbtn {
+        padding: .5rem;
+        width: 40%;
+        border: #fff 2px solid;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .functionbtn a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .functionbtn:hover {
+        background-color: #ffeea4;
+    }
+
+    @keyframes rotation-animation {
+        0% {
+            transform: rotate(-15deg);
+        }
+
+        100% {
+            transform: rotate(15deg);
+        }
+
+    }
+
+    .footer {
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #enen {
+        color: blanchedalmond;
+    }
+
     .topnav {
-        position: sticky;
+        position: fixed;
+        display: flex;
+        inset: 0 0 auto 0;
         top: 0;
         z-index: 4;
         overflow: hidden;
+        justify-content: space-between;
         background-color: #ffffff00;
         border-radius: 5px;
         box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
         backdrop-filter: blur(10px);
     }
 
+    .topnav-icon {
+        padding: .5rem 1rem;
+        justify-content: end;
+        display: flex;
+        align-items: center;
+    }
+
+    .topnav-center {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .topnav-link {
+        justify-content: start;
+        display: flex;
+        align-items: center;
+    }
+
     .topnav span {
-        float: right;
         display: block;
         color: #ffffff;
         font-weight: 400;
         text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
     }
 
     .topnav span:hover {
@@ -41,8 +119,6 @@
     }
 
     .topnav a {
-        float: left;
-        display: block;
         color: #ffffff;
         font-weight: 400;
         text-align: center;
@@ -53,7 +129,7 @@
     .topnav a:hover {
         background-color: #fff1d2;
         color: rgb(82, 232, 190);
-        border-radius: 20%;
+        border-radius: 5rem;
     }
 
     .sidenav {
@@ -67,7 +143,7 @@
         box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
         overflow-x: hidden;
         transition: 0.5s;
-        padding-top: 60px;
+        padding-top: 3rem;
         backdrop-filter: blur(10px);
     }
 
@@ -88,18 +164,6 @@
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
-    }
-
-    .dec {
-        float: unset;
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .bg {
-        float: inline-end;
-        border-radius: 50px;
     }
 
     .type {
@@ -143,34 +207,39 @@
     }
 
     .container {
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        gap: 5px;
-        padding: 100px;
+        display: flex;
+        justify-content: center;
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
     }
 
     .sidebar {
+        width: 300px;
         display: flex;
         flex-direction: column;
         background-color: rgba(255, 230, 141, 0);
-        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7;
         border-radius: 15px;
-        padding: 25px;
-        z-index: 3;
+        padding-top: 1rem;
+        padding: 1rem;
+        margin-right: 2.5%;
     }
 
     .main {
-        background-color: rgba(255, 255, 255, 0);
-        padding: 50px;
+        max-width: 780px;
+        display: flex;
+        flex-direction: column;
     }
 
     .post {
+        position: relative;
         background-color: rgba(255, 255, 255, 0.421);
         padding: 25px;
         border-radius: 15px;
         box-shadow: #2bb57e 0px 0px 10px;
         color: #fff;
+        margin-bottom: 1rem;
     }
 
     .information {
@@ -186,15 +255,69 @@
         animation: alternate spin 1s forwards;
     }
 
+    .decoration {
+        position: relative;
+        display: flex;
+        height: 100vh;
+        font-size: 20px;
+        padding: .2rem;
+        overflow: hidden;
+    }
+
+    #ball {
+        width: 10rem;
+        height: 10rem;
+        background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
+        border-radius: 50%;
+        filter: blur(10px);
+        z-index: 2;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+    }
+
+    #circle {
+        position: absolute;
+        top: 25%;
+        left: 45%;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    #circle span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform-origin: bottom center;
+    }
+
+    .maomi {
+        position: relative;
+        color: rgba(255, 255, 255, 0);
+        font-size: 380%;
+        top: 17%;
+        left: 18%;
+        z-index: 3;
+        animation: alternate rotation-animation 1s infinite;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+    }
+
+    .maomi:hover {
+        animation-play-state: paused;
+        color: #ffffff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95;
+    }
+
     .welcome {
         position: absolute;
-        top: 100px;
+        top: 8rem;
         display: flex;
         background: radial-gradient(circle, rgb(255, 230, 141) 0%, rgb(167, 255, 197) 35%, rgba(255, 255, 255, 1) 100%);
         background-size: 200% 200%;
         animation: cd-animation 2s linear infinite;
-        width: 500px;
-        height: 500px;
+        width: 30rem;
+        height: 30rem;
         border-radius: 50%;
         shape-outside: circle(50%);
         justify-content: center;
@@ -212,35 +335,34 @@
     .blur1 {
         filter: blur(5px);
         position: absolute;
-        top: 500px;
-        left: 500px;
-        width: 300px;
-        height: 300px;
+        top: 70%;
+        left: 40%;
+        width: 20rem;
+        height: 20rem;
         background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
         border-radius: 50%;
-        z-index: 2;
+        z-index: 1;
         animation: alternate scale-animation 5s infinite;
     }
 
     .blur2 {
         filter: blur(10px);
         position: absolute;
-        top: 400px;
-        bottom: 0px;
-        left: 1050px;
-        width: 400px;
-        height: 400px;
+        top: 20%;
+        left: 70%;
+        width: 20rem;
+        height: 20rem;
         background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
         border-radius: 50%;
-        z-index: 2;
+        z-index: 0;
         animation: alternate scale-animation2 3s infinite;
     }
 
     .blur3 {
         filter: blur(20px);
         position: absolute;
-        top: 400px;
-        left: -50px;
+        top: 40%;
+        left: 0;
         width: 500px;
         height: 500px;
         background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
@@ -366,7 +488,6 @@
     }
 
     p {
-        font-size: 18px;
         color: rgb(255, 255, 255);
     }
 
@@ -374,22 +495,111 @@
         border-radius: 25px;
     }
 
-    .topnav {
+    h2 {
+        color: #fff;
+    }
+
+    .ghlg {
+        position: absolute;
+        top: 60%;
+        left: -10%;
+        z-index: 3;
+    }
+
+    .func {
         position: relative;
-        width: 100%;
-        height: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    .functionbtn {
+        padding: .5rem;
+        width: 40%;
+        border: #fff 2px solid;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .functionbtn a {
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .functionbtn:hover {
+        background-color: #ffeea4;
+    }
+
+    @keyframes rotation-animation {
+        0% {
+            transform: rotate(-15deg);
+        }
+
+        100% {
+            transform: rotate(15deg);
+        }
+
+    }
+
+    .footer {
+        position: relative;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    #enen {
+        color: blanchedalmond;
+    }
+
+    .topnav {
+        height: 10%;
+        position: fixed;
+        display: flex;
+        inset: 0 0 auto 0;
+        top: 0;
         z-index: 4;
         overflow: hidden;
+        justify-content: space-between;
         background-color: #ffffff00;
         border-radius: 5px;
         box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
         backdrop-filter: blur(10px);
     }
 
+    .topnav-icon {
+        padding: .5rem 1rem;
+        justify-content: end;
+        display: flex;
+        align-items: center;
+    }
+
+    .topnav-center {
+        display: none;
+    }
+
+    .topnav-link {
+        justify-content: start;
+        display: flex;
+        align-items: center;
+    }
+
     .topnav span {
-        font-size: 16px;
-        float: right;
         display: block;
+        color: #ffffff;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .topnav span:hover {
+        color: rgb(82, 232, 190);
+        border-radius: 20%;
+    }
+
+    .topnav a {
         color: #ffffff;
         font-weight: 400;
         text-align: center;
@@ -397,27 +607,10 @@
         text-decoration: none;
     }
 
-    .topnav span:hover {
-        color: rgb(82, 232, 190);
-        border-radius: 20%;
-
-    }
-
-    .topnav a {
-        float: left;
-        display: block;
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: 400;
-        text-align: center;
-        padding: 10px 10px;
-        text-decoration: none;
-    }
-
     .topnav a:hover {
         background-color: #fff1d2;
         color: rgb(82, 232, 190);
-        border-radius: 20%;
+        border-radius: 5rem;
     }
 
     .sidenav {
@@ -428,15 +621,14 @@
         top: 0;
         right: 0;
         background-color: #ffffff;
-        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7;
         overflow-x: hidden;
         transition: 0.5s;
-        padding-top: 60px;
+        padding-top: 3rem;
         backdrop-filter: blur(10px);
     }
 
     .sidenav a {
-        font-size: 50px;
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         color: rgb(82, 232, 190);
@@ -451,20 +643,8 @@
     .sidenav .closebtn {
         position: absolute;
         right: 25px;
-        font-size: 100px;
+        font-size: 36px;
         margin-left: 50px;
-    }
-
-    .dec {
-        float: unset;
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .bg {
-        float: inline-end;
-        border-radius: 50px;
     }
 
     .type {
@@ -477,7 +657,7 @@
     }
 
     .login {
-        width: 10%;
+        width: 200px;
         background: none;
         border: none;
         border-bottom: 1px solid black;
@@ -486,11 +666,9 @@
     }
 
     .button {
-        font-size: large;
-        font-weight: 600;
         color: white;
-        width: 100px;
-        height: 50px;
+        width: 50px;
+        height: 25px;
         background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
         border: none;
         border-top: 1px solid white;
@@ -507,48 +685,36 @@
         transform: scale(1.1);
     }
 
-    .decoration {
-        position: relative;
-        height: 100%;
-        font-size: 18px;
-        padding: 50px;
-        overflow: hidden;
-        height: max-content;
-    }
-
     .container {
-        width: 100%;
-        position: relative;
-        display: grid;
-        gap: 5px;
+        justify-content: center;
+        padding-top: 2%;
     }
 
     .sidebar {
         display: flex;
         flex-direction: column;
         background-color: rgba(255, 230, 141, 0);
-        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
+        box-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7;
         border-radius: 15px;
-        padding: 25px;
-        z-index: 3;
+        padding-top: 1rem;
+        padding: 1rem;
     }
 
     .main {
-        background-color: rgba(255, 255, 255, 0);
-        padding: 50px;
+        padding-top: 2rem;
+        max-width: 780px;
+        display: flex;
+        flex-direction: column;
     }
 
     .post {
+        position: relative;
         background-color: rgba(255, 255, 255, 0.421);
         padding: 25px;
         border-radius: 15px;
         box-shadow: #2bb57e 0px 0px 10px;
         color: #fff;
-    }
-
-    .information {
-        display: flex;
-        justify-content: space-between;
+        margin-bottom: 1rem;
     }
 
     .post:hover {
@@ -559,48 +725,33 @@
         animation: alternate spin 1s forwards;
     }
 
-    .maomi {
+    .decoration {
         position: relative;
-        color: rgba(255, 255, 255, 0);
-        font-size: 25px;
-        z-index: 4;
-        animation: alternate rotation-animation 1s infinite;
-        text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7, 0 0 80px #dfff50;
-    }
-
-    .maomi:hover {
-        animation-play-state: paused;
-        color: #ffffff;
-        text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95;
-    }
-
-    .welcome {
-        position: absolute;
-        display: flex;
-        background: radial-gradient(circle, rgb(255, 230, 141) 0%, rgb(167, 255, 197) 35%, rgba(255, 255, 255, 1) 100%);
-        background-size: 200% 200%;
-        animation: cd-animation 2s linear infinite;
-        width: 500px;
-        height: 500px;
-        border-radius: 50%;
-        shape-outside: circle(50%);
         justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        z-index: 2;
-        animation: alternate translate-animation 5s infinite;
+        top: 10%;
+        height: 100vh;
+        font-size: 20px;
+        padding: .2rem;
     }
 
-    .shape {
-        font-size: 18px;
-        font-weight: 600;
+    #ball {
+        width: 2rem;
+        height: 2rem;
+        background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
+        border-radius: 50%;
+        filter: blur(10px);
+        z-index: 2;
+        text-align: center;
+        line-height: 100px;
+        color: white;
     }
 
     #circle {
         position: absolute;
-        top: 200px;
-        width: 200px;
-        height: 200px;
+        top: 50%;
+        left: 50%;
+        width: 10rem;
+        height: 10rem;
     }
 
     #circle span {
@@ -611,57 +762,82 @@
         transform-origin: bottom center;
     }
 
+    .maomi {
+        position: relative;
+        color: rgba(255, 255, 255, 0);
+        font-size: 220%;
+        top: 40%;
+        left: 10%;
+        z-index: 3;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95, 0 0 70px #00ffb7;
+    }
+
+    .maomi:hover {
+        animation-play-state: paused;
+        color: #ffffff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffffff00, 0 0 30px #fff, 0 0 40px #00ff95;
+    }
+
+    .welcome {
+        position: absolute;
+        top: 10%;
+        display: flex;
+        background: radial-gradient(circle, rgb(255, 230, 141) 0%, rgb(167, 255, 197) 35%, rgba(255, 255, 255, 1) 100%);
+        background-size: 200% 200%;
+        animation: cd-animation 2s linear infinite;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        shape-outside: circle(50%);
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        z-index: 2;
+        animation: alternate translate-animation 5s infinite;
+    }
+
+    .shape {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
     .blur1 {
         filter: blur(5px);
         position: absolute;
-        top: 800px;
-        left: 500px;
-        width: 300px;
-        height: 300px;
+        top: 70%;
+        left: 40%;
+        width: 5rem;
+        height: 5rem;
         background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
         border-radius: 50%;
-        z-index: 2;
+        z-index: 1;
         animation: alternate scale-animation 5s infinite;
     }
 
     .blur2 {
         filter: blur(10px);
         position: absolute;
-        top: 1000px;
-        bottom: 0px;
-        left: 400px;
-        width: 600px;
-        height: 600px;
+        top: 20%;
+        left: 70%;
+        width: 5rem;
+        height: 5rem;
         background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
         border-radius: 50%;
-        z-index: 2;
+        z-index: 0;
         animation: alternate scale-animation2 3s infinite;
     }
 
     .blur3 {
         filter: blur(20px);
         position: absolute;
-        top: 400px;
-        left: -50px;
-        width: 500px;
-        height: 500px;
+        top: 40%;
+        left: 0;
+        width: 10rem;
+        height: 10rem;
         background: linear-gradient(45deg, rgb(98, 210, 165), rgb(255, 215, 113));
         border-radius: 50%;
         z-index: 1;
         animation: alternate scale-animation2 3s infinite;
-    }
-
-    #ball {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background: linear-gradient(45deg, rgb(132, 255, 206), rgb(255, 231, 169));
-        border-radius: 50%;
-        filter: blur(10px);
-        z-index: 2;
-        text-align: center;
-        line-height: 100px;
-        color: white;
     }
 
     .slideshow img {
