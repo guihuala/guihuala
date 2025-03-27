@@ -9,12 +9,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
+    permissions:  # 添加权限部分
+      contents: write  # 授予写入权限
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GUIHUA_LA }}  # 使用你的PAT
+          fetch-depth: 0  # 获取完整git历史
+      
       - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GUIHUA_LA }}
           USERNAME: ${{ github.repository_owner }}
+      
       - name: Commit & Push
         run: |
           git config user.name github-actions
