@@ -1,5 +1,5 @@
-# 桂花拉糕
+我是桂花拉糕，姓桂花名拉糕。可以叫我桂花或者moku。
 
-随便堆一点东西，希望各位佬不要仔细看，因为很多语言我介于会与不会之间就开始写东西了。
+关于我：https://guihuala.github.io/intro.html
 
 ![](./profile-3d-contrib/profile-green-animate.svg)
